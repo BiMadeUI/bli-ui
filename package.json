@@ -11,10 +11,16 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"lintFixAll": "eslint . --fix",
+		"prettierFixAll": "prettier --write \"./**/**/*.{js,jsx,ts,tsx}\"",
+		"fix:lintPrettier": "yarn prettierFixAll && yarn lintFixAll",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^3.2.2",
+		"@commitlint/cli": "^19.6.0",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@storybook/addon-essentials": "^8.4.6",
 		"@storybook/addon-interactions": "^8.4.6",
 		"@storybook/addon-svelte-csf": "^5.0.0-next.13",
@@ -30,6 +36,7 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
 		"globals": "^15.0.0",
+		"husky": "^9.1.7",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.6",
 		"prettier-plugin-tailwindcss": "^0.6.5",
@@ -42,6 +49,9 @@
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "^0.5.15"
+		"@tailwindcss/typography": "^0.5.15",
+		"clsx": "^2.1.1",
+		"commitlint": "^19.6.0",
+		"tailwind-merge": "^2.5.5"
 	}
 }

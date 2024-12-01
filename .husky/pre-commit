@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '🏗️👷 testing and buidling before commit'
+
+yarn fix:lintPrettier ||
+(
+    echo '😤 Oh no! 🚀🚀🚀🚀🚀
+          ESLint & Prettier Check Failed. Make the required changes listed above, add changes and try to commit again.'
+    false;
+)
+
+
+# If everything passes... Now we can commit
+echo '🚀🚀🚀 You win this time... I am committing this now. ✅✅✅✅'

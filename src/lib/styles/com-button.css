@@ -1,0 +1,18 @@
+.bli-button {
+	@apply inline-block cursor-pointer rounded-lg border-0 font-bold leading-none transition-all duration-200 ease-linear disabled:cursor-not-allowed disabled:opacity-80;
+}
+.bli-button--primary {
+	@apply bg-primary text-white hover:opacity-80;
+}
+.bli-button--secondary {
+	@apply hover:text-primary hover:shadow-button-hover bg-transparent text-primary-text shadow-button-secondary;
+}
+.bli-button--small {
+	@apply px-4 py-2 text-xs;
+}
+.bli-button--medium {
+	@apply px-5 py-3 text-sm;
+}
+.bli-button--large {
+	@apply px-6 py-4 text-base;
+}

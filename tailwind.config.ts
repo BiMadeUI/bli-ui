@@ -5,7 +5,16 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			boxShadow: {
+				'button-secondary': 'rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset',
+				'button-hover': 'rgba(29, 78, 216, 0.8) 0px 0px 0px 1px inset'
+			},
+			colors: {
+				primary: '#1d4ed8',
+				'primary-text': '#333'
+			}
+		}
 	},
 
 	plugins: [typography]
