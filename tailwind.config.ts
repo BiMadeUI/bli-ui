@@ -13,6 +13,11 @@ export default {
 			colors: {
 				primary: '#1d4ed8',
 				'primary-text': '#333'
+			},
+			transitionProperty: {
+				height: 'height',
+				width: 'width',
+				spacing: 'margin, padding'
 			}
 		}
 	},

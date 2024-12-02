@@ -4,7 +4,7 @@
 	export interface IProps {
 		label: string;
 		kind: TKind;
-		disabled: boolean;
+		disabled?: boolean;
 		backgroundColor?: string;
 		size?: TSize;
 		class?: string;
